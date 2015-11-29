@@ -30,7 +30,7 @@ public class DistributionCounter{
             String[] line = value.toString().split(",");
             java.util.Calendar mydate = java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("EST"));
             mydate.setTimeInMillis(Long.parseLong(line[1])*1000);
-            k.set(mydate.get(java.util.Calendar.DAY_OF_MONTH)); 
+            k.set(mydate.get(java.util.Calendar.DAY_OF_WEEK)); 
             context.write(k,one);
         }
     }
